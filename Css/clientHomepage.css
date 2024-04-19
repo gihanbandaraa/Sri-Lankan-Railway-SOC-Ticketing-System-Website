@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: Poppins,Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../Images/Ninearch.png'); /* Replace 'your-image-path.jpg' with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);  /* Adjust the last value (0.8) for opacity */
+}
+.header {
+  background-color: crimson;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: crimson;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.confirm-booking {
+  background-color: crimson;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.confirm-booking:hover {
+  background-color: darkred;
+}
+
+.seat-panel {
+  overflow-y: auto;
+  max-height: 200px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.reset-btn {
+
+  width: auto;
+  height: auto;
+  justify-content: center;
+  cursor: pointer;
+  background-color: crimson;
+}
+.class-seats {
+  margin-bottom: 20px;
+}
+
+.seat-button {
+  margin-right: 30px; /* Adjust the right margin to create a gap */
+  margin-bottom: 30px; /* Adjust the bottom margin to create a gap */
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.seat-button.booked {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.seat-button.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#confirm-btn,
+#nic-section {
+  display: none;
+}
+.seat-button.selected {
+    background-color: green;
+    color: white;
+}

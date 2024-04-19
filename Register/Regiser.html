@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="../Css/Register.css">
+</head>
+
+<body>
+    <h1>User Registration</h1>
+    <form action="../Register/register.php" method="post" id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="nic">NIC Number:</label>
+        <input type="text" id="nic" name="nic" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <div style="display: flex; align-items: center; justify-items: center;">
+            <input type="checkbox" id="showPassword">
+            <label id="showPasswordtext" for="showPassword">Show Password</label>
+        </div>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <span id="passwordMatch" class="error"></span>
+
+        <input class="regButton" type="submit" value="Register">
+        <p class="login">If you already have an account, <a href="../Login/Login.html">login here</a>.</p>
+
+    </form>
+
+    <script>
+        const password = document.getElementById("password");
+        const confirm_password = document.getElementById("confirm_password");
+        const passwordMatch = document.getElementById("passwordMatch");
+
+        function validatePassword() {
+            if (password.value !== confirm_password.value) {
+                passwordMatch.innerHTML = "Passwords do not match";
+                return false;
+            } else {
+                passwordMatch.innerHTML = "";
+                return true;
+            }
+        }
+
+        confirm_password.addEventListener("keyup", validatePassword);
+
+        const showPasswordCheckbox = document.getElementById("showPassword");
+        const passwordField = document.getElementById("password");
+
+        showPasswordCheckbox.addEventListener("change", function () {
+            if (showPasswordCheckbox.checked) {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        });
+    </script>
+</body>
+
+</html>

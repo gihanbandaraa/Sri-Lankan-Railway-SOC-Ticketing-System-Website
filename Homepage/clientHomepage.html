@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking System</title>
+    <link rel="stylesheet" href="../Css/clientHomepage.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Effortless Travel Begins Here: Book Your Journey Today!</h1>
+        </div>
+        <div class="form-group">
+            <label for="date">Pick the Date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="start-station">Select the Start Station:</label>
+            <select id="start-station" name="start-station">
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="destination-station">Select the Destination Station:</label>
+            <select id="destination-station" name="destination-station">
+
+            </select>
+        </div>
+        <div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: 30px;" >
+            <button id="find-btn">Find</button>
+            <button class="reset-btn" id="reset-btn">Reset</button>
+        </div>
+        <table id="train-data">
+            <thead>
+                <tr>
+                    <th>Train Id</th>
+                    <th>Train Name</th>
+                    <th>Start Station</th>
+                    <th>Destination Station</th>
+                    <th>Capacity</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be added here -->
+            </tbody>
+        </table>
+        <div style="padding: 10px; margin-top: 20px;">
+            <span style="color: white; padding: 10px; background-color: crimson; border-radius: 20px;">Booked</span>
+            <span style="margin-left: 20px; color: white; padding: 10px; background-color: #44bd32; border-radius: 20px;">Available</span>
+        </div>
+        
+        <div class="seat-panel" id="seat-panel">
+            <!-- Seat information will be added here -->
+        </div>
+        <div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: 30px;">
+
+            <div id="nic-section" style="display: none;">
+                <label for="nic">Enter Your NIC Number:</label>
+                <input type="text" id="nic" name="nic">
+            </div>
+            <button class="confirm-booking" id="confirm-btn">Confirm Booking</button>
+        </div>
+     
+    </div>
+    <div id="message-box"></div>
+ 
+
+
+    <script src="../Homepage/script.js"></script>
+</body>
+
+</html>

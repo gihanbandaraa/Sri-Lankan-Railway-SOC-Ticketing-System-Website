@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../Css/Login.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form class="login-form" method="post" action="../Login/login.php">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" name="login">Login</button>
+    </form>
+    <div class="register-link">
+      <p>Don't have an account?</p>
+      <a href="../Register/Regiser.html">Register Now</a>
+    </div>
+  </div>
+</body>
+
+</html>
